@@ -166,7 +166,7 @@ export default function CreateListing() {
             className='border p-3 rounded-lg'
             id='name'
             maxLength='62'
-            minLength='10'
+            minLength='2'
             required
             onChange={handleChange}
             value={formData.name}
@@ -180,6 +180,14 @@ export default function CreateListing() {
             onChange={handleChange}
             value={formData.description}
           />
+          <select type='text'
+                  className='border p-3 rounded-lg'
+                  id="city"
+                  onChange={handleChange}>
+          <option value="" disabled selected hidden>Please select city...</option>
+          <option value={formData.city === 'Tirana'}>Tirane</option>
+          <option value={formData.city === 'Vlore'}>Vlore</option>
+          </select>
           <input
             type='text'
             placeholder='Address'
