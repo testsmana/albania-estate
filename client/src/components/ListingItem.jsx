@@ -24,6 +24,9 @@ export default function ListingItem({ listing }) {
             </p>
           </div>
           <p className='text-sm text-gray-600 line-clamp-2'>
+            {listing.city}
+          </p>
+          <p className='text-sm text-gray-600 line-clamp-2'>
             {listing.description}
           </p>
           <p className='text-slate-500 mt-2 font-semibold '>

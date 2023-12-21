@@ -18,6 +18,7 @@ export default function CreateListing() {
     name: '',
     description: '',
     address: '',
+    city:'',
     type: 'rent',
     bedrooms: 1,
     bathrooms: 1,
@@ -180,6 +181,15 @@ export default function CreateListing() {
             onChange={handleChange}
             value={formData.description}
           />
+          <select name="city" id="city"
+                 className='border p-3 rounded-lg'
+                 onChange={handleChange}>
+            <option value="" disabled selected hidden>Select a city</option> 
+            <option value="Tirane">Tirane</option>
+            <option value="Elbasan">Elbasan</option>
+            <option value="Durres">Durres</option>
+            <option value="Himare">Himare</option>
+          </select>
           <input
             type='text'
             placeholder='Address'

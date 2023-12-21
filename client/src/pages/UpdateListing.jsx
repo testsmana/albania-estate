@@ -19,6 +19,7 @@ export default function CreateListing() {
     name: '',
     description: '',
     address: '',
+    city: '',
     type: 'rent',
     bedrooms: 1,
     bathrooms: 1,
@@ -205,6 +206,15 @@ export default function CreateListing() {
             onChange={handleChange}
             value={formData.address}
           />
+          <select name="city" id="city"
+                 className='border p-3 rounded-lg'
+                 onChange={handleChange}>
+            <option value="" disabled selected hidden>Select a city</option> 
+            <option value="Tirane">Tirane</option>
+            <option value="Elbasan">Elbasan</option>
+            <option value="Durres">Durres</option>
+            <option value="Himare">Himare</option>
+          </select>
           <div className='flex gap-6 flex-wrap'>
             <div className='flex gap-2'>
               <input
